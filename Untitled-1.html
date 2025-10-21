@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ana Sayfa - Tugay Bozkurt</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- OpenLayers CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css">
+</head>
+<body>
+  <header>
+    <h1>Tugay Bozkurt - Web GIS Sayfası</h1>
+    <nav>
+      <a href="index.html">Ana Sayfa</a> |
+      <a href="background.html">Arka Plan</a> |
+      <a href="projects.html">Projeler</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Web GIS Projem</h2>
+      <p>Bu sayfa, GMT458 dersi kapsamında oluşturulmuş kişisel bir web sitesidir.</p>
+    </section>
+
+    <section id="map-section">
+      <h3>OpenLayers Harita</h3>
+      <div id="map" class="map"></div>
+    </section>
+  </main>
+
+  <!-- OpenLayers JS -->
+  <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
+  <script src="js/ol-map.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arka Plan</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Arka Plan</h1>
+    <nav>
+      <a href="index.html">Ana Sayfa</a> |
+      <a href="projects.html">Projeler</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Kullandığım Teknolojiler</h2>
+    <ul>
+      <li>HTML5 - Sayfa yapısı</li>
+      <li>CSS3 - Görsel tasarım ve animasyonlar</li>
+      <li>JavaScript - Etkileşimli özellikler</li>
+      <li>OpenLayers - Harita oluşturma</li>
+      <li>GitHub Pages - Yayınlama platformu</li>
+    </ul>
+  </main>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeler</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Projeler</h1>
+    <nav>
+      <a href="index.html">Ana Sayfa</a> |
+      <a href="background.html">Arka Plan</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Yaptığım Çalışmalar</h2>
+    <table class="projects-table">
+      <thead>
+        <tr>
+          <th>Proje Adı</th>
+          <th>Açıklama</th>
+          <th>Görsel</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>OpenLayers Harita</td>
+          <td>Basit bir harita uygulaması oluşturdum.</td>
+          <td><img src="images/photo1.jpg" alt="map" width="100"></td>
+        </tr>
+        <tr>
+          <td>Web Tasarımı</td>
+          <td>HTML ve CSS ile kişisel web sayfası geliştirdim.</td>
+          <td><img src="images/photo2.jpg" alt="web" width="100"></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
+/* Genel ayarlar */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  background: #f8f9fa;
+}
+
+/* Başlık kısmı */
+header {
+  background: #003366;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  color: #ffcc00;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+/* Hero bölümü (animasyonlu başlık) */
+.hero {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(90deg, #e3f2fd, #f1f8e9);
+}
+
+.hero h2 {
+  display: inline-block;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  animation: glow 3s infinite;
+}
+
+/* Basit animasyon */
+@keyframes glow {
+  0% { box-shadow: 0 0 0px #ccc; }
+  50% { box-shadow: 0 0 20px #80d8ff; }
+  100% { box-shadow: 0 0 0px #ccc; }
+}
+
+/* Harita */
+.map {
+  width: 90%;
+  height: 400px;
+  margin: 20px auto;
+  border: 2px solid #ccc;
+}
+
+/* Tablo tasarımı */
+.projects-table {
+  width: 90%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  background: white;
+}
+
+.projects-table th, .projects-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.projects-table th {
+  background: #e0e0e0;
+}
+// OpenLayers Harita örneği
+var map = new ol.Map({
+  target: 'map',
+  layers: [
+    new ol.layer.Tile({
+      source: new ol.source.OSM() // OpenStreetMap katmanı
+    })
+  ],
+  view: new ol.View({
+    center: ol.proj.fromLonLat([32.73185, 39.87009]), // Ankara koordinatları
+    zoom: 12
+  })
+});

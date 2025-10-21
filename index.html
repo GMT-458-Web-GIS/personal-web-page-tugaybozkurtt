@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ana Sayfa - Tugay Bozkurt</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- OpenLayers CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css">
+</head>
+<body>
+  <header>
+    <h1>Tugay Bozkurt - Web GIS Sayfası</h1>
+    <nav>
+      <a href="index.html">Ana Sayfa</a> |
+      <a href="background.html">Arka Plan</a> |
+      <a href="projects.html">Projeler</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Web GIS Projem</h2>
+      <p>Bu sayfa, GMT458 dersi kapsamında oluşturulmuş kişisel bir web sitesidir.</p>
+    </section>
+
+    <section id="map-section">
+      <h3>OpenLayers Harita</h3>
+      <div id="map" class="map"></div>
+    </section>
+  </main>
+
+  <!-- OpenLayers JS -->
+  <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
+  <script src="js/ol-map.js"></script>
+</body>
+</html>

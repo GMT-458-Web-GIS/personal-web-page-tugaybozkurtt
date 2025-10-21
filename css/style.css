@@ -1,0 +1,70 @@
+/* Genel ayarlar */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  background: #f8f9fa;
+}
+
+/* Başlık kısmı */
+header {
+  background: #003366;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  color: #ffcc00;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+/* Hero bölümü (animasyonlu başlık) */
+.hero {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(90deg, #e3f2fd, #f1f8e9);
+}
+
+.hero h2 {
+  display: inline-block;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  animation: glow 3s infinite;
+}
+
+/* Basit animasyon */
+@keyframes glow {
+  0% { box-shadow: 0 0 0px #ccc; }
+  50% { box-shadow: 0 0 20px #80d8ff; }
+  100% { box-shadow: 0 0 0px #ccc; }
+}
+
+/* Harita */
+.map {
+  width: 90%;
+  height: 400px;
+  margin: 20px auto;
+  border: 2px solid #ccc;
+}
+
+/* Tablo tasarımı */
+.projects-table {
+  width: 90%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  background: white;
+}
+
+.projects-table th, .projects-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.projects-table th {
+  background: #e0e0e0;
+}
