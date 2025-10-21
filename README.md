@@ -20,3 +20,5 @@ An OpenStreetMap map is displayed on the page using OpenLayers.
 Deployment :
 
 The project will be published via GitHub Pages.
+
+ https://gmt-458-web-gis.github.io/personal-web-page-tugaybozkurtt/
